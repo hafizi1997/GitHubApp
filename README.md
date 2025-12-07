@@ -1,6 +1,6 @@
 # GitHub Starred Repos
 
-This React Native/Expo application displays the most starred GitHub repositories created in the last 10 days. It was built for the Etiqa mobile developer assessment described in the provided PDF. The app fetches data from GitHub’s search API, paginates results and shows each repository in a scrolling list with its name, description, star count and owner information.
+This React Native/Expo application displays the most starred GitHub repositories created in the last 10 days.
 
 ## Features
 
