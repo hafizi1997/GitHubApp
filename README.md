@@ -14,7 +14,7 @@ This React Native/Expo application displays the most starred GitHub repositorie
 1. **Install dependencies.** Navigate into the project directory and run:
 
    ```sh
-   npm install
+   npm install --force
    ```
 
    This will install Expo, React, React Native and Axios.
