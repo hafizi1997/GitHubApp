@@ -29,7 +29,11 @@ const Home = () => {
           setRepos(data.items);
           setPage(2);
         } else {
-          setRepos((prev) => [...prev, ...data.items]);
+         setRepos(prev =>
+         [...prev, ...data.items].filter(
+            (repo, index, self) => index === self.findIndex(r => r.id === repo.id)
+         )
+         );
           setPage(pageNumber + 1);
         }
 
@@ -77,7 +81,7 @@ const Home = () => {
       <Text style={styles.header}>Trending Repos</Text>
       <FlatList
         data={repos}
-        keyExtractor={(item) => item.node_id}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => <RepoListItem repo={item} />}
         onEndReached={handleLoadMore}
         onEndReachedThreshold={0.5}
